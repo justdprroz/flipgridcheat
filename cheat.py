@@ -1,13 +1,15 @@
 import platform
+import sys
 
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 from videourl import url
 
-if platform.system() == "Linux":
-    driver = webdriver.Chrome("./chromedriver")
-if platform.system() == "Windows":
-    driver = webdriver.Chrome("./chromedriver.exe")
+options = Options()
+if "--headless" in sys.argv:
+    options.add_argument("--headless")
+driver = webdriver.Chrome(options=options)
 
 driver.get(url)
 while (True):
