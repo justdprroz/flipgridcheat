@@ -3,6 +3,8 @@ Script to cheat likes on flipgrid
 ## Requirements
 You should have Google Chrome installed
 
+You should have Chrome Web Driver installed
+
 On Linux
 ```
 sudo pip install selenium
