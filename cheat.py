@@ -9,6 +9,7 @@ from videourl import url
 options = Options()
 if "--headless" in sys.argv:
     options.add_argument("--headless")
+options.add_argument("--mute-audio")
 driver = webdriver.Chrome(options=options)
 
 driver.get(url)
